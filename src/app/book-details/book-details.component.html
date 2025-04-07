@@ -1,0 +1,21 @@
+<div class="book-details">
+  <h2>圖書詳情</h2>
+
+  <div *ngIf="book">
+    <h3>{{ book.title }}</h3>
+    <p><strong>作者:</strong> {{ book.author }}</p>
+    <p><strong>價格:</strong> {{ book.price | currency: 'NT$' }}</p>
+    <p><strong>描述:</strong></p>
+    <p class="description">{{ book.description }}</p>
+
+    <div class="actions">
+      <button [routerLink]="['/books', book.id, 'edit']">編輯</button>
+      <button routerLink="/books">返回列表</button>
+    </div>
+  </div>
+
+  <div *ngIf="!book">
+    <p>找不到該圖書！</p>
+    <button routerLink="/books">返回列表</button>
+  </div>
+</div>

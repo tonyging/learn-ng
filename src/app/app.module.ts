@@ -8,11 +8,14 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BookListComponent } from './book-list/book-list.component';
+import { BookDetailsComponent } from './book-details/book-details.component';
+import { BookEditComponent } from './book-edit/book-edit.component';
 
 @NgModule({
-  declarations: [AppComponent, HelloWorldComponent, HomeComponent, AboutComponent, UserListComponent, ContactFormComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  declarations: [AppComponent, HelloWorldComponent, HomeComponent, AboutComponent, UserListComponent, ContactFormComponent, BookListComponent, BookDetailsComponent, BookEditComponent],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

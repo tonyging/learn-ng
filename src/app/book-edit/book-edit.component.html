@@ -1,0 +1,40 @@
+<!-- book-edit.component.html -->
+<div class="book-edit">
+  <h2>{{ isNewBook ? '添加新書' : '編輯圖書' }}</h2>
+
+  <form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="title">書名</label>
+      <input id="title" type="text" formControlName="title" />
+      <div *ngIf="bookForm.get('title')?.invalid && bookForm.get('title')?.touched" class="error">
+        書名是必填的
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="author">作者</label>
+      <input id="author" type="text" formControlName="author" />
+      <div *ngIf="bookForm.get('author')?.invalid && bookForm.get('author')?.touched" class="error">
+        作者是必填的
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="description">描述</label>
+      <textarea id="description" formControlName="description" rows="4"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="price">價格</label>
+      <input id="price" type="number" formControlName="price" />
+      <div *ngIf="bookForm.get('price')?.invalid && bookForm.get('price')?.touched" class="error">
+        請輸入有效的價格
+      </div>
+    </div>
+
+    <div class="actions">
+      <button type="submit" [disabled]="bookForm.invalid">保存</button>
+      <button type="button" routerLink="/books">取消</button>
+    </div>
+  </form>
+</div>

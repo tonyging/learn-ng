@@ -1,1 +1,80 @@
 /* You can add global styles to this file, and also import other style files */
+/* 全局樣式 */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+nav li {
+  margin-left: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+nav a.active {
+  color: #3f51b5;
+}
+
+button {
+  background-color: #3f51b5;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #303f9f;
+}
+
+/* 圖書列表樣式 */
+.books {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.book-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.book-card h3 {
+  margin-top: 0;
+}
+
+.book-card a {
+  color: #3f51b5;
+  text-decoration: none;
+}
+
+/* 圖書詳情樣式 */
+.book-details {
+  max-width: 800px;
+}
+
+.description {
+  line-height: 1.6;
+}

@@ -1,0 +1,16 @@
+<div class="book-list">
+  <h2>圖書列表</h2>
+  <button routerLink="/books/new">添加新書</button>
+
+  <div class="books">
+    <div class="book-card" *ngFor="let book of books">
+      <h3>
+        <a [routerLink]="['/books', book.id]" [title]="book.title + ' 詳情'">
+          {{ book.title }}
+        </a>
+      </h3>
+      <p class="author">作者: {{ book.author }}</p>
+      <p class="price">價格: {{ book.price | currency: 'NT$' }}</p>
+    </div>
+  </div>
+</div>
