@@ -1,27 +1,51 @@
-# LearnNg
+# Learn Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.11.
+使用 Angular 13 開發的學習專案，包含基礎元件開發、表單處理和路由功能的實作。專案使用 TypeScript、SCSS 進行開發，並整合了 Prettier 進行程式碼格式化。
 
-## Development server
+## 功能特點
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- 基礎路由導航
+- 元件開發示例
+- 表單處理
+- 使用者列表展示
+- 聯絡表單
 
-## Code scaffolding
+## 開發環境需求
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Node.js
+- Angular CLI 13.x
+- TypeScript 4.6.x
 
-## Build
+## 安裝與執行
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. 安裝依賴套件：
 
-## Running unit tests
+```bash
+npm install
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2. 啟動開發伺服器：
 
-## Running end-to-end tests
+```bash
+npm start
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+3. 開啟瀏覽器訪問：`http://localhost:4200`
 
-## Further help
+## 專案結構
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```
+src/
+├── app/
+│   ├── components/
+│   ├── services/
+│   └── ...
+├── assets/
+└── ...
+```
+
+## 開發工具
+
+- Visual Studio Code
+- Prettier 程式碼格式化
+- Angular DevTools
